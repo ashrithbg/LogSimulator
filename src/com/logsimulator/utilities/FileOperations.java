@@ -9,7 +9,7 @@ import java.io.IOException;
 public class FileOperations {
 	private String path;
 	
-	FileOperations(String path){
+	public FileOperations(String path){
 		this.path = path;
 	}
 	

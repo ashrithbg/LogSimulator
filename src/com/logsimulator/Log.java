@@ -1,4 +1,4 @@
-package com.logsimulator.utilities;
+package com.logsimulator;
 
 import java.text.DateFormat;
 import java.text.ParseException;

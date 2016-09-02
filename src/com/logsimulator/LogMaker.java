@@ -1,6 +1,8 @@
-package com.logsimulator.utilities;
+package com.logsimulator;
 
 import java.util.Properties;
+
+import com.logsimulator.utilities.FileOperations;
 
 public class LogMaker {
 	private String path;
