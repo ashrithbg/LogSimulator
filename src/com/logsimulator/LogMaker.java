@@ -4,7 +4,17 @@ import java.util.Properties;
 
 import com.logsimulator.utilities.FileOperations;
 
+/**
+ * 
+ * This class builds the log content followed by making a single write call to
+ * the file
+ * 
+ *
+ */
 public class LogMaker {
+	/**
+	 * getters and setters for the path and properties variables
+	 */
 	private String path;
 	private Properties properties;
 
@@ -24,6 +34,14 @@ public class LogMaker {
 		this.path = path;
 	}
 
+	/**
+	 * This method generates a log object for each of the s*c*24*60 lines to be
+	 * generated which would eventually be written into a file
+	 * 
+	 * @return a string builder object which has s*c*24*60 lines separated by
+	 *         "\n" where 's' represents the number of servers, 'c' represents
+	 *         the number of cpus
+	 */
 	public StringBuilder buildLogContent() {
 		StringBuilder sb = new StringBuilder();
 
@@ -42,8 +60,13 @@ public class LogMaker {
 		return sb;
 
 	}
-	
-	public void generateLogFile(){
+
+	/**
+	 * This method makes a final write of the StringBuilder object to the
+	 * DATA_PATH directory
+	 */
+
+	public void generateLogFile() {
 		FileOperations operator = new FileOperations(path);
 		operator.writeFile(buildLogContent());
 	}
